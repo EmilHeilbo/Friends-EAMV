@@ -15,7 +15,7 @@
     - Naar vi laver en klasse med data som skal gemmes, er det vigtigt at vi har en Noegle Vaerdi (Key), fx en static int, eller i vores tilfaelde maaske Email?
   - [ ] *Group*: Friend, Family, Acquaintance, Colleauge, Foe, Flirt, Boss, Other...
   - [ ] *Interest*: Chess, Fishing, Cooking, Gaming, Sports, Animals, Photography, CSGO...
-- [ ] Opret i logic;:page_facing_up interface \<\<*Friends*\>\> 
+- [ ] Opret i logic; interface \<\<*Friends*\>\> 
   - [ ] boolean create, update, delete; *Friend* read, Set/List/Map/Array?\<Friend\> search
 <br>
 
