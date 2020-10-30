@@ -8,7 +8,7 @@
 
 - [x] Create packages (data, logic, presentation)
 - [x] Create serialized logic.Friend object class
-- [ ] Create logic.FriendFactory class
+- [x] Create logic.FriendFactory class
 - [ ] CRUD class
 - [ ] CSV I/O connection
 - [ ] Terminal UI for testing (MVP)

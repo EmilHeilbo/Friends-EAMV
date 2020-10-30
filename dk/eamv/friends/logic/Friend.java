@@ -1,20 +1,23 @@
 package dk.eamv.friends.logic;
 
 import java.io.Serializable;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Friend implements Serializable {
 	private static final long serialVersionUID = 10L;
 
 	private String name, email, cellNo;
+	private LocalDate birthday;
 	private FriendType type;
 	private ArrayList<Interests> interests = new ArrayList<Interests>();
 
-	public Friend(String name, String email, String cellNo, FriendType type) {
+	public Friend(String name, String email, String cellNo, LocalDate birthday, FriendType type) {
 		this.name = name;
 		this.email = email;
 		this.cellNo = cellNo;
+		this.birthday = birthday;
 		this.type = type;
 	}
 
@@ -28,6 +31,14 @@ public class Friend implements Serializable {
 
 	public String getCellNo() {
 		return cellNo;
+	}
+
+	public LocalDate getBirthday() {
+		return birthday;
+	}
+
+	public int getAge() {
+		return Period.between(birthday, LocalDate.now()).getYears();
 	}
 
 	public FriendType getType() {
