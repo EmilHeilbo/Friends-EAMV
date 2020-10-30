@@ -1,5 +1,7 @@
 package data;
 
+import java.io.IOException;
+
 import logic.Friend;
 import logic.SaveStrategy;
 
@@ -8,7 +10,7 @@ public class FriendDataFactory {
     private static ListData<Friend> data;
     private SaveStrategy format;
 
-    public FriendDataFactory(String uri, SaveStrategy format){
+    public FriendDataFactory(String uri, SaveStrategy format) throws IOException {
         if(instance==null){
             data = new FriendCVS(uri);
             this.format = format;

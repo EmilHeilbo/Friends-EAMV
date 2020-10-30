@@ -8,7 +8,7 @@ public interface ListData<E>{
     public E set(int index, E element);
     public boolean remove(E element);
     public int size();
-    public void setURI(String uri);
+    public void setURI(String uri) throws IOException;
     public void commit() throws IOException;
     public void rollback() throws IOException;
 }

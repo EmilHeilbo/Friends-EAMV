@@ -12,7 +12,7 @@ import logic.Friend;
 public class FriendObject extends AbstractListData<Friend> {
 
 
-    public FriendObject(String uri) {
+    public FriendObject(String uri) throws IOException {
         super(uri);
     }
 

@@ -1,5 +1,6 @@
 package data;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,9 +8,10 @@ public abstract class AbstractListData<E> implements ListData<E> {
 
     protected List<E> data = new ArrayList<E>();
     protected String uri;
-    
-    public AbstractListData(String uri){
+
+    public AbstractListData(String uri) throws IOException {
         this.uri = uri;
+        rollback();
     }
 
     public AbstractListData(AbstractListData<E> data){
@@ -42,8 +44,9 @@ public abstract class AbstractListData<E> implements ListData<E> {
     }
 
     @Override
-    public void setURI(String uri){
+    public void setURI(String uri) throws IOException {
         this.uri = uri;
+        rollback();
     }
 
 }

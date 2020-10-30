@@ -13,7 +13,7 @@ import logic.Interest;
 
 public class FriendCVS extends AbstractListData<Friend> {
 
-    public FriendCVS(String uri) {
+    public FriendCVS(String uri) throws IOException {
         super(uri);
     }
 

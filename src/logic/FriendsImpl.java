@@ -17,7 +17,7 @@ public class FriendsImpl implements Friends, Serializable {
     private String uri;
     private SaveStrategy format;
 
-    public FriendsImpl(String uri, SaveStrategy format) {
+    public FriendsImpl(String uri, SaveStrategy format) throws IOException {
         this.uri = uri;
         this.format = format;
         dataFactory = new FriendDataFactory(uri, format);
@@ -68,7 +68,7 @@ public class FriendsImpl implements Friends, Serializable {
     }
 
     @Override
-    public void setURI(String uri) {
+    public void setURI(String uri) throws IOException {
         if (this.uri != uri) {
             data.setURI(uri);
             this.uri = uri;

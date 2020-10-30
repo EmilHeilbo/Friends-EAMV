@@ -1,5 +1,6 @@
 package logic;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface Friends {
@@ -13,7 +14,7 @@ public interface Friends {
 
    public List<Friend> search(String str);
 
-   public void setURI(String uri);
+   public void setURI(String uri) throws IOException;
 
    public void setSaveStrategy(SaveStrategy format);
 }
