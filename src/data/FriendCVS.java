@@ -29,8 +29,8 @@ public class FriendCVS extends AbstractListData<Friend> {
     public void commit() throws IOException {
         try (var pw = new PrintWriter(uri)) {
             pw.println("group;name;email;mobile;interests");
-            data.forEach(e -> pw.println(e.group().name() + e.name() + e.email() + e.mobile()
-                    + e.interests().stream().map(Interest::name).collect(Collectors.joining(", "))));
+            data.forEach(e -> pw.println(e.group().name() + ";" + e.name() + ";" + e.email() + ";" + e.mobile()
+            + ";" + e.interests().stream().map(Interest::name).collect(Collectors.joining(","))));
         }
     }
 

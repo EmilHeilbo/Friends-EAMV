@@ -28,17 +28,19 @@
 ### Data-laget
 - [x] Opret i data; interface \<\<*FriendData*\>\>
   - [x] boolean create, update, delete; *Friend* read; int size; void sort, commit, rollback
-- [ ] Opret i data; class **FriendDataImplCVS**, class **FriendDataImplObj**; class **FriendDataImplJDB**?
+- [x] Opret i data; class **FriendDataImplCVS**, class **FriendDataImplObj**; class **FriendDataImplJDB**?
   - De/Serialization kan vaere meget farlige, hvis projektet anvender bestemte libraies, fx, CommomsCollection. Det er vist nok ogsaa muligt at udfoere DoS angreb, eftersom nogle klasser, kan opbruge meget RAM, og kraeve meget CPU tid; String?
   - Vi kan anvende Singelton DP paa vores **FriendDataImpl..**, for at undgaa at have flere instancer af vores data loadet i RAM.
   - Vi kan maaske anvende Factory DP, naar vi vil vaelge og skifte mellem, hvordan vi gemmer vores data; CVS, OBJ, Osv..
   - Vi kan maaske lave en *Abstract Generic* **Data**, hvor det kun er *Comit* og *Rollback* som er abstrakte. 
-  - [ ] Overvejelser omkring brug af private transient ved key i Friend, for at undgaa, at slutbrugeren laver rod i systemet. Betyder nok at data'en skal have nye noegler, ved hver rollback, hvilket nok vil vaere upraktisk.
+  - Overvejelser omkring brug af private transient ved key i Friend, for at undgaa, at slutbrugeren laver rod i systemet. Betyder nok at data'en skal have nye noegler, ved hver rollback, hvilket nok vil vaere upraktisk.
 <br>
 
 ### Test af klasserne indtil nu
-- [ ] Opret i presentation; class **TestFriends**
+- [x] Opret i presentation; class **TestFriends**
   - [ ] anvend **FriendsFactory**; Opret *Friend* objekt og kald create paa objektet. Search paa noeglevaerdien af objektet, skal retunere objektet, og print:printer: objektet ud paa et stykke A3 fotopapir.; Gentag for flere forskellige *Friend* objekter.
+  - [ ] Aendre saa der oprettes en fil, hvis filen ikke eksistere.
+  - [ ] faar en tom liste tilbage naar der soeges?
 
 
 ### Andet - Samtale emner: skriv referat af samtalerne under punkterne

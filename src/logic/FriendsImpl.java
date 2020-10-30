@@ -35,7 +35,7 @@ public class FriendsImpl implements Friends, Serializable {
     @Override
     public boolean update(Friend friend) {
         for (int i = 0; i < data.size(); i++)
-            if (data.get(i).key() == friend.key()) {
+            if (data.get(i).email() == friend.email()) {
                 data.set(i, friend);
                 transaction();
                 return true;
@@ -45,6 +45,9 @@ public class FriendsImpl implements Friends, Serializable {
 
     @Override
     public boolean delete(Friend friend) {
+        for (int i = 0; i < data.size(); i++)
+            if (data.get(i).email().equals(friend.email()))
+                return false;
         var res = data.remove(friend);
         if (res)
             transaction();
@@ -52,9 +55,9 @@ public class FriendsImpl implements Friends, Serializable {
     }
 
     @Override
-    public Friend read(int key) {
+    public Friend read(String email) {
         for (int i = 0; i < data.size(); i++)
-            if (data.get(i).key() == key)
+            if (data.get(i).email().equals(email))
                 return data.get(i);
         return null;
     }

@@ -10,7 +10,7 @@ public interface Friends {
 
    public boolean delete(Friend friend);
 
-   public Friend read(int key);
+   public Friend read(String key);
 
    public List<Friend> search(String str);
 

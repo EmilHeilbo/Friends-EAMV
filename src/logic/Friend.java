@@ -5,8 +5,6 @@ import java.util.Set;
 
 public class Friend implements Serializable {
     private static final long serialVersionUID = 1L;
-    private static int id;
-    private int key;
     private String name, email, mobile;
     private Group group;
     private Set<Interest> interests;
@@ -14,13 +12,9 @@ public class Friend implements Serializable {
     public Friend(String name, String email, String mobile, Group group, Set<Interest> interests) {
         this.name = name;
         this.email = email;
+        this.mobile = mobile;
         this.group = group;
         this.interests = interests;
-        this.key = id++;
-    }
-
-    public int key() {
-        return key;
     }
 
     public String name() {
