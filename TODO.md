@@ -10,29 +10,30 @@
 ### Til at starte med
 - [x] Opret Java-projekt
 - [x] Opret Trelagsmodel (packages): :open_file_folder: presentation, logic, data
-- [ ] Opret i logic; record *Friend*, enum *Group*, enum *Interest*, som definere det domain vi arbejder paa.
-  - [ ] *Friend*: String name, String email, String mobile, Group group, Set\<Interest\> interests; toString, toCVS
+- [x] Opret i logic; record *Friend*, enum *Group*, enum *Interest*, som definere det domain vi arbejder paa.
+  - [x] *Friend*: String name, String email, String mobile, Group group, Set\<Interest\> interests; toString, toCVS
     - Naar vi laver en klasse med data som skal gemmes, er det vigtigt at vi har en Noegle Vaerdi (Key), fx en static int, eller i vores tilfaelde maaske Email?
-  - [ ] *Group*: Friend, Family, Acquaintance, Colleauge, Foe, Flirt, Boss, Other...
-  - [ ] *Interest*: Chess, Fishing, Cooking, Gaming, Sports, Animals, Photography, CSGO...
-- [ ] Opret i logic; interface \<\<*Friends*\>\> 
-  - [ ] boolean create, update, delete; *Friend* read, Set/List/Map/Array?\<Friend\> search
+  - [x] *Group*: Friend, Family, Acquaintance, Colleauge, Foe, Flirt, Boss, Other...
+  - [x] *Interest*: Chess, Fishing, Cooking, Gaming, Sports, Animals, Photography, CSGO...
+- [x] Opret i logic; interface \<\<*Friends*\>\> 
+  - [x] boolean create, update, delete; *Friend* read, Set/List/Map/Array?\<Friend\> search
 <br>
 
 ### Lidt mere logik
-- [ ] Lav i logic; class **FriendsImpl**, class **FriendsFactory**
-  - [ ] Overvej om data skal gemmes ved hver operation, eller ved en seperat metode, fx void save.
+- [x] Lav i logic; class **FriendsImpl**, class **FriendsFactory**
+  - [x] Overvej om data skal gemmes ved hver operation, eller ved en seperat metode, fx void save.
   - naar data gemmes, kalder vi commit i **FriendDataImpl...**
 <br>
 
 ### Data-laget
-- [ ] Opret i data; interface \<\<*FriendData*\>\>
-  - [ ] boolean create, update, delete; *Friend* read; int size; void sort, commit, rollback
+- [x] Opret i data; interface \<\<*FriendData*\>\>
+  - [x] boolean create, update, delete; *Friend* read; int size; void sort, commit, rollback
 - [ ] Opret i data; class **FriendDataImplCVS**, class **FriendDataImplObj**; class **FriendDataImplJDB**?
   - De/Serialization kan vaere meget farlige, hvis projektet anvender bestemte libraies, fx, CommomsCollection. Det er vist nok ogsaa muligt at udfoere DoS angreb, eftersom nogle klasser, kan opbruge meget RAM, og kraeve meget CPU tid; String?
   - Vi kan anvende Singelton DP paa vores **FriendDataImpl..**, for at undgaa at have flere instancer af vores data loadet i RAM.
   - Vi kan maaske anvende Factory DP, naar vi vil vaelge og skifte mellem, hvordan vi gemmer vores data; CVS, OBJ, Osv..
   - Vi kan maaske lave en *Abstract Generic* **Data**, hvor det kun er *Comit* og *Rollback* som er abstrakte. 
+  - [ ] Overvejelser omkring brug af private transient ved key i Friend, for at undgaa, at slutbrugeren laver rod i systemet. Betyder nok at data'en skal have nye noegler, ved hver rollback, hvilket nok vil vaere upraktisk.
 <br>
 
 ### Test af klasserne indtil nu
