@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.List;
 
 import logic.Friend;
 
@@ -30,10 +31,14 @@ public class FriendObject extends AbstractListData<Friend> {
         }
     }
 
-    // TODO - read up on ObjectInputStream usage.
+    // Deserialazation can be insecure and exploited for arbitrary code execution if no means of safty is made.
+    @SuppressWarnings("unchecked")
     @Override
     public void rollback() throws IOException {
         try (var ois = new ObjectInputStream(new FileInputStream(uri))) {
+            data = (List<Friend>) ois.readObject();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }

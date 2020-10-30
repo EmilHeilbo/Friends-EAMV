@@ -4,11 +4,12 @@ import logic.Friend;
 import logic.SaveStrategy;
 
 public class FriendDataFactory {
-    private ListData<Friend> data;
+    private static FriendDataFactory instance;
+    private static ListData<Friend> data;
     private SaveStrategy format;
 
     public FriendDataFactory(String uri, SaveStrategy format){
-        if(data==null){
+        if(instance==null){
             data = new FriendCVS(uri);
             this.format = format;
         }
@@ -26,6 +27,8 @@ public class FriendDataFactory {
             case Object -> data = new FriendObject(data);
 			default -> throw new IllegalArgumentException("Unexpected value: " + format);
         }
+        this.format = format;
         return data;
     }
+
 }

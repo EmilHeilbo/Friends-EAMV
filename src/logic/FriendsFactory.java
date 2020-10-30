@@ -1,7 +1,7 @@
 package logic;
 
 public class FriendsFactory {
-    private Friends impl;
+    private static Friends impl;
 
     public FriendsFactory(String uri, SaveStrategy format) {
         if (impl == null)
