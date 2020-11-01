@@ -39,7 +39,7 @@
 ### Test af klasserne indtil nu
 - [x] Opret i presentation; class **TestFriends**
   - [ ] anvend **FriendsFactory**; Opret *Friend* objekt og kald create paa objektet. Search paa noeglevaerdien af objektet, skal retunere objektet, og print:printer: objektet ud paa et stykke A3 fotopapir.; Gentag for flere forskellige *Friend* objekter.
-  - [ ] Aendre saa der oprettes en fil, hvis filen ikke eksistere.
+  - [x] Aendre saa der oprettes en fil, hvis filen ikke eksistere.
   - [ ] faar en tom liste tilbage naar der soeges?
 
 

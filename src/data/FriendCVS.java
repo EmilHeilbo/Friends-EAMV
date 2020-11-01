@@ -1,6 +1,7 @@
 package data;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -36,7 +37,9 @@ public class FriendCVS extends AbstractListData<Friend> {
 
     @Override
     public void rollback() throws IOException {
-        try (var br = new BufferedReader(new FileReader(uri))) {
+        var file = new File(uri);
+        file.createNewFile();
+        try (var br = new BufferedReader(new FileReader(file))) {
             data.clear();
             br.lines().skip(1).forEach(e -> {
                 var f = e.split(";");

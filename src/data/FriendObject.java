@@ -1,5 +1,6 @@
 package data;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -35,7 +36,9 @@ public class FriendObject extends AbstractListData<Friend> {
     @SuppressWarnings("unchecked")
     @Override
     public void rollback() throws IOException {
-        try (var ois = new ObjectInputStream(new FileInputStream(uri))) {
+        var file = new File(uri);
+        file.createNewFile();
+        try (var ois = new ObjectInputStream(new FileInputStream(file))) {
             data = (List<Friend>) ois.readObject();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
