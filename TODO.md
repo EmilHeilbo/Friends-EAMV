@@ -38,9 +38,9 @@
 
 ### Test af klasserne indtil nu
 - [x] Opret i presentation; class **TestFriends**
-  - [ ] anvend **FriendsFactory**; Opret *Friend* objekt og kald create paa objektet. Search paa noeglevaerdien af objektet, skal retunere objektet, og print:printer: objektet ud paa et stykke A3 fotopapir.; Gentag for flere forskellige *Friend* objekter.
+  - [x] anvend **FriendsFactory**; Opret *Friend* objekt og kald create paa objektet. Search paa noeglevaerdien af objektet, skal retunere objektet, og print:printer: objektet ud paa et stykke A3 fotopapir.; Gentag for flere forskellige *Friend* objekter.
   - [x] Aendre saa der oprettes en fil, hvis filen ikke eksistere.
-  - [ ] faar en tom liste tilbage naar der soeges?
+  - [x] faar en tom liste tilbage naar der soeges?
 
 
 ### Andet - Samtale emner: skriv referat af samtalerne under punkterne
@@ -57,3 +57,9 @@
 - [ ] Bekymringer for projektet?
 - [ ] Bekymringer for gruppen?
 - [ ] Rollefordeling?
+<br>
+
+### Fejl og mangler:
+- [ ] TestFriends funger korrekt naar der koeres en test, og forkert ved to forskellige test cases.
+- [ ] UI
+- [ ] Flere test cases

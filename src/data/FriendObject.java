@@ -37,7 +37,7 @@ public class FriendObject extends AbstractListData<Friend> {
     @Override
     public void rollback() throws IOException {
         var file = new File(uri);
-        file.createNewFile();
+        if(file.exists())
         try (var ois = new ObjectInputStream(new FileInputStream(file))) {
             data = (List<Friend>) ois.readObject();
         } catch (ClassNotFoundException e) {

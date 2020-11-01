@@ -67,7 +67,7 @@ public class FriendsImpl implements Friends, Serializable {
         var result = new ArrayList<Friend>();
         for (int i = 0; i < data.size(); i++)
             result.add(data.get(i));
-        return result.stream().filter(e -> e.toString().contains(str)).collect(Collectors.toList());
+        return result.stream().filter(e -> e.toString().toLowerCase().contains(str.toLowerCase())).collect(Collectors.toList());
     }
 
     @Override

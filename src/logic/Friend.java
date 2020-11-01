@@ -36,4 +36,10 @@ public class Friend implements Serializable {
     public Set<Interest> interests() {
         return interests;
     }
+
+    @Override
+    public String toString() {
+        return email + group + interests.toString().replaceAll("[\\[\\], ]", "") + mobile + name;
+    }
+
 }
