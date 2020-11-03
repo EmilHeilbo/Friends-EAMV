@@ -20,9 +20,29 @@ public class Container<T> {
 
     public Container(String dbfile) {
         this.dbfile = dbfile;
+        try {
+            rollback();
+        } catch (ClassNotFoundException | IOException) {}
     }
 
-    void commit() {}
+    /*
+    addElement()
+    getElement()
+    replaceElement()
+    removeElement()
+    size()
+    sort()
+    */
+    
+    public void commit() throws IOException {
+        if (dbfile != null)
+            try {
+                
+            }
+    }
 
-    void rollback() {}
+    @SuppressWarnings("unchecked")
+    public void rollback() {
+        ;
+    }
 }
