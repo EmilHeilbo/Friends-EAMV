@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Container<T> {
+public class FileHandler<T> {
     private List<T> list = new ArrayList<>();
     private String dbfile = null;
 

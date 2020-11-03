@@ -1,13 +1,10 @@
 package dk.eamv.friends.logic;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 
-public class Friend implements Serializable {
-	private static final long serialVersionUID = 10L;
-
+public class Friend {
 	private String name, email, cellNo;
 	private LocalDate birthday;
 	private FriendType type;
