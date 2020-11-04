@@ -8,7 +8,7 @@ public class Friend {
 	private String name, email, cellNo;
 	private LocalDate birthday;
 	private FriendType type;
-	private ArrayList<Interests> interests = new ArrayList<Interests>();
+	private ArrayList<Interests> interests = new ArrayList<>();
 
 	public Friend(String name, String email, String cellNo, LocalDate birthday, FriendType type) {
 		this.name = name;
@@ -44,8 +44,8 @@ public class Friend {
 
 	public ArrayList<String> getInterests() {
 		var list = new ArrayList<String>();
-		for (Interests enumInterests : interests)
-			switch(enumInterests) {
+		for (Interests i : interests)
+			switch(i) {
 				case CHESS -> list.add("Chess");
 				case FISHING -> list.add("Fishing");
 				case COOKING -> list.add("Cooking");
