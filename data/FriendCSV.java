@@ -12,18 +12,14 @@ import logic.Friend;
 import logic.Group;
 import logic.Interest;
 
-public class FriendCVS extends AbstractListData<Friend> {
+public class FriendCSV extends AbstractListData<Friend> {
 
-    public FriendCVS(String uri) throws IOException {
+    public FriendCSV(String uri) throws IOException {
         super(uri);
     }
 
-    public FriendCVS(AbstractListData<Friend> data) {
+    public FriendCSV(AbstractListData<Friend> data) {
         super(data);
-    }
-
-    public FriendCVS(ListData<Friend> data) {
-        this((AbstractListData<Friend>) data);
     }
 
     @Override
@@ -39,8 +35,8 @@ public class FriendCVS extends AbstractListData<Friend> {
     public void rollback() throws IOException {
         var file = new File(uri);
         file.createNewFile();
+        data.clear();
         try (var br = new BufferedReader(new FileReader(file))) {
-            data.clear();
             br.lines().skip(1).forEach(e -> {
                 var f = e.split(";");
                 var i = Arrays.stream(f[4].split(",")).map(s -> Interest.valueOf(s)).collect(Collectors.toSet());

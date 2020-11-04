@@ -87,4 +87,5 @@ nb-configuration.xml
 ##############################
 ## Custom ignore cases
 ##############################
-*.cvs
+*.csv
+*.object

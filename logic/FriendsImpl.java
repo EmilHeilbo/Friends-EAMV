@@ -20,7 +20,7 @@ public class FriendsImpl implements Friends, Serializable {
     public FriendsImpl(String uri, SaveStrategy format) throws IOException {
         this.uri = uri;
         this.format = format;
-        dataFactory = new FriendDataFactory(uri, format);
+        dataFactory = FriendDataFactory.getInstance(uri, format);
         data = dataFactory.provide();
     }
 
