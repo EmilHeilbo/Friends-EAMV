@@ -10,7 +10,8 @@ public class Friend {
 	private FriendType type;
 	private ArrayList<Interests> interests = new ArrayList<>();
 
-	public Friend(String name, String email, String cellNo, LocalDate birthday, FriendType type) {
+	public Friend(String name, String email, String cellNo,
+			LocalDate birthday, FriendType type) {
 		this.name = name;
 		this.email = email;
 		this.cellNo = cellNo;

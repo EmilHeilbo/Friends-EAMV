@@ -7,13 +7,21 @@
 ## To-Do:
 
 - [x] Create packages (data, logic, presentation)
+- _Logic:_
 - [x] Create serialized logic.Friend object class
 - [x] Create logic.FriendFactory class
 - [ ] CRUD class
-- [ ] CSV I/O connection
+- _Data:_
+- [ ] SQLite
+  - [ ] Check if file exists (create if it doesn't) & connect to database
+  - [ ] Database communication
+- _Presentation:_
 - [ ] Terminal UI for testing (MVP)
 - [ ] JavaFX GUI (MVP)
 - [ ] Material Design UI/UX
 
+Reference material:
+- https://material.io/
+- https://colormind.io/
 
 _"Did I ever tell you the definition of insanity? Insanity is doing the exact same thing over and over again, expecting things to change..."_

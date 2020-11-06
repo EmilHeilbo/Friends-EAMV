@@ -10,15 +10,22 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class FileHandler<T> {
+public class DBHandler<T> {
+    public void commit() {
+        SQLiteJDBC.connect();
+        
+    }
     /*
     SQLiteJDBC.connect();
 
     addElement()
     getElement()
+    replaceElement()
     removeElement()
+
+    sort<K>()
 
     commit()
     rollback()
-     */
+    */
 }

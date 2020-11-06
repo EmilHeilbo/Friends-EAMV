@@ -16,7 +16,7 @@ public class UI extends Application {
     public void start(Stage pStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("UI.fxml"));
     
-        Scene scene = new Scene(root, 300, 275);
+        Scene scene = new Scene(root, 600, 400);
     
         pStage.setTitle("Friends");
         pStage.setScene(scene);
