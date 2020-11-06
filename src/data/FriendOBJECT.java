@@ -16,11 +16,11 @@ public class FriendOBJECT extends AbstractListData<Friend> {
         super(uri);
     }
 
-    public FriendOBJECT(AbstractListData<Friend> data){
+    public FriendOBJECT(AbstractListData<Friend> data) {
         super(data);
     }
 
-	@Override
+    @Override
     public void commit() throws IOException {
         try (var oos = new ObjectOutputStream(new FileOutputStream(uri))) {
             oos.writeObject(data);
@@ -34,6 +34,7 @@ public class FriendOBJECT extends AbstractListData<Friend> {
      * Encrypting the serialisation is a safe way to use serialsation safely.
      * Another option is to use "safe" liberies, which either has no known vunerabilites, or uses theroy proven methods to insure safety.
      * Gson could be used instead of serialisation.
+     *
      * @see https://greyshell.github.io/blog/2019/11/22/insecure-deserialization-java/
      */
     @SuppressWarnings("unchecked")
@@ -42,11 +43,11 @@ public class FriendOBJECT extends AbstractListData<Friend> {
         var file = new File(uri);
         file.createNewFile();
         data.clear();
-        if(file.length()!=0)
-        try (var ois = new SaferObjectInputStream(new FileInputStream(file))) {
-            data = (List<Friend>) ois.readObject();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+        if (file.length() != 0)
+            try (var ois = new SaferObjectInputStream(new FileInputStream(file))) {
+                data = (List<Friend>) ois.readObject();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
     }
 }

@@ -24,11 +24,7 @@ public class TestFriends {
         friends = FriendsFactory.getInstance(uri, format).provide();
         test(1);
 
-
-
         System.out.println("\n\n\n");
-
-
 
         uri = "friendData.object";
         format = SaveStrategy.OBJECT;
@@ -39,7 +35,7 @@ public class TestFriends {
     }
 
     public static void test(int testNumber) throws IOException {
-        System.out.println("Beginning of Test "+ testNumber + "#");
+        System.out.println("Beginning of Test " + testNumber + "#");
         var hans = new Friend("Hans", "hi@eamv.dk", "70457823", Group.Acquaintance,
                 new TreeSet<Interest>(Arrays.asList(Interest.Fishing, Interest.Chess)));
         friends.create(hans);
@@ -67,6 +63,6 @@ public class TestFriends {
         var searchResult4 = friends.search("eamv");
         System.out.println("Expect: Hans, Mads, Lone");
         searchResult4.forEach(System.out::println);
-        System.out.println("End of Test "+ testNumber + "#");
+        System.out.println("End of Test " + testNumber + "#");
     }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.stage.Stage?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Background?>
+<?import javafx.scene.layout.BackgroundFill?>
+<?import javafx.scene.layout.CornerRadii?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.event.ActionEvent?>
+<?import javafx.event.EventHandler?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+
+<!--Color scheme: 092E3B, 06F8F9, 97F807, F67E15, B51723-->
+
+<Stage title="Friends" resizable="false" minHeight="600" minWidth="800">
+    <scene>
+        <Scene>
+            <GridPane style="-fx-background-color: #092E3B">
+                <MenuBar prefWidth="800">
+                    <Menu text="test">
+                        <MenuItem text="test2"/>
+                    </Menu>
+                </MenuBar>
+                <TextField promptText="sample text" GridPane.rowIndex="1"/>
+            </GridPane>
+        </Scene>
+    </scene>
+</Stage>

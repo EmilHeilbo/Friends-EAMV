@@ -14,10 +14,10 @@ public abstract class AbstractListData<E> implements ListData<E> {
         rollback();
     }
 
-    public AbstractListData(AbstractListData<E> data){
+    public AbstractListData(AbstractListData<E> data) {
         this.data = data.data;
     }
-    
+
     @Override
     public boolean add(E element) {
         return data.add(element);

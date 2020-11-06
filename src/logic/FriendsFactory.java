@@ -8,7 +8,7 @@ public class FriendsFactory {
 
     /**
      * Singelton Factory for Friends
-    */
+     */
     private FriendsFactory(String uri, SaveStrategy format) throws IOException {
         if (impl == null)
             impl = new FriendsImpl(uri, format);
@@ -22,7 +22,7 @@ public class FriendsFactory {
             }
         return instance;
     }
-    
+
     public Friends provide() {
         return impl;
     }
