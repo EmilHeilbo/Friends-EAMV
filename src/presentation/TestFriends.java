@@ -63,6 +63,25 @@ public class TestFriends {
         var searchResult4 = friends.search("eamv");
         System.out.println("Expect: Hans, Mads, Lone");
         searchResult4.forEach(System.out::println);
+        System.out.println();
+        
+        friends.delete(mads);
+        var searchResult5 = friends.search("eamv");
+        System.out.println("Expect: Hans, Lone");
+        searchResult5.forEach(System.out::println);
+        System.out.println();
+        
+        var hansData = friends.read("hi@eamv.dk");
+        var hansUpdated = new Friend(hansData.name(), hansData.email(), "8888888", hansData.group(), hansData.interests());
+        friends.update(hansUpdated);
+        System.out.println("Expect: Hans - updated mobile");
+        var searchResult6 = friends.search("hi@eamv.dk");
+        searchResult6.forEach(System.out::println);
+        System.out.println();
+
+        var read = friends.read("no");
+        System.out.println("Expect null: " + read);
+
         System.out.println("End of Test " + testNumber + "#");
     }
 }

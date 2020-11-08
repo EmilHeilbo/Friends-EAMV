@@ -3,7 +3,7 @@ package logic;
 import java.io.Serializable;
 import java.util.Set;
 
-public class Friend implements Serializable {
+public class Friend implements Serializable{
     private static final long serialVersionUID = 1L;
     private String name, email, mobile;
     private Group group;
@@ -42,4 +42,11 @@ public class Friend implements Serializable {
         return email + group + interests.toString().replaceAll("[\\[\\], ]", "") + mobile + name;
     }
 
+    @Override
+    public boolean equals(Object o){
+        if(this==o) return true;
+        if(!(o instanceof Friend)) return false;
+        var f = (Friend) o;
+        return email.compareTo(f.email)==0;
+    }
 }

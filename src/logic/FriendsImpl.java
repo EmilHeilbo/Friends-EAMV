@@ -34,21 +34,21 @@ public class FriendsImpl implements Friends, Serializable {
 
     @Override
     public boolean update(Friend friend) {
+        var res = false;
         for (int i = 0; i < data.size(); i++)
-            if (data.get(i).email() == friend.email()) {
+            if (data.get(i).equals(friend))
                 data.set(i, friend);
-                transaction();
-                return true;
-            }
-        return false;
+        if (res)
+            transaction();
+        return res;
     }
 
     @Override
     public boolean delete(Friend friend) {
+        var res = false;
         for (int i = 0; i < data.size(); i++)
-            if (data.get(i).email().equals(friend.email()))
-                return false;
-        var res = data.remove(friend);
+            if (data.get(i).equals(friend))
+                res = data.remove(friend);
         if (res)
             transaction();
         return res;
@@ -67,7 +67,8 @@ public class FriendsImpl implements Friends, Serializable {
         var result = new ArrayList<Friend>();
         for (int i = 0; i < data.size(); i++)
             result.add(data.get(i));
-        return result.stream().filter(e -> e.toString().toLowerCase().contains(str.toLowerCase())).collect(Collectors.toList());
+        return result.stream().filter(e -> e.toString().toLowerCase().contains(str.toLowerCase()))
+                .collect(Collectors.toList());
     }
 
     @Override
