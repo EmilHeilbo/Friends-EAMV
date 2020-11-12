@@ -4,7 +4,8 @@ import java.io.Serializable;
 import java.util.Set;
 
 public class Friend implements Serializable{
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 2020000001L;
+
     private String name, email, mobile;
     private Group group;
     private Set<Interest> interests;

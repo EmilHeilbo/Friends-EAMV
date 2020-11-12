@@ -50,7 +50,7 @@
 - [ ] Det vigtigeste er back-end, så UI kan være simpelt til at starte med?
 - [ ] Kommunikations platform og hyppighed?
 - [ ] Standing meetings - Korte møder, hvor vi tager status, lægger en plan. Måske mere end en gang pr. arbejds session?
-- [ ] Læse plan og forventningsafstemning med hinanden?
+- [x] Læse plan og forventningsafstemning med hinanden?
   - [ ] Hvordan læser vi bedst individuelt?
   - [ ] Opsamling af læste sider / emner?
 - [ ] Bekymringer for projektet?
@@ -62,3 +62,4 @@
 - [ ] TestFriends funger korrekt når der køres en test, og forkert ved to forskellige test cases.
 - [ ] UI
 - [ ] Flere testcases
+- [ ] Anvend builder patteren og bedre brug af strategy til at gemme data.

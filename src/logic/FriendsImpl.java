@@ -9,9 +9,8 @@ import java.util.stream.Collectors;
 import data.FriendDataFactory;
 import data.ListData;
 
-public class FriendsImpl implements Friends, Serializable {
+public class FriendsImpl implements Friends {
 
-    private static final long serialVersionUID = 202000000001L;
     private FriendDataFactory dataFactory;
     private ListData<Friend> data;
     private String uri;
