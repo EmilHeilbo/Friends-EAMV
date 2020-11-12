@@ -4,26 +4,41 @@
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.event.ActionEvent?>
 <?import javafx.event.EventHandler?>
-<?import javafx.geometry.Insets?>
-<?import javafx.geometry.Pos?>
 
 <!--Color scheme: 092E3B, 06F8F9, 97F807, F67E15, B51723-->
 
 <Stage title="Friends" resizable="false" minHeight="600" minWidth="800">
     <scene>
         <Scene>
-            <GridPane style="-fx-background-color: #092E3B">
-                <MenuBar prefWidth="800">
-                    <Menu text="test">
-                        <MenuItem text="test2"/>
+            <!--<GridPane style="-fx-background-color:#092E3B">
+                <MenuBar prefWidth="800" GridPane.columnSpan="2">
+                    <Menu text="bruh">
+                        <MenuItem text="This"/>
+                        <MenuItem text="Is"/>
+                        <MenuItem text="A"/>
+                        <MenuItem text="Useless"/>
+                        <MenuItem text="Dropdown"/>
+                        <MenuItem text="Menu"/>
                     </Menu>
                 </MenuBar>
-                <TextField promptText="sample text" GridPane.rowIndex="1"/>
+                <VBox prefWidth="200" style="-fx-background-color:#06F8F9" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="10">
+                    <TextField promptText="sample text"/>
+                </VBox>
+                <Button text="Bruh" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
                 <ListView GridPane.rowIndex="2"/>
-            </GridPane>
+            </GridPane>-->
+            <TabPane style="-fx-background-color:#092e3b" prefWidth="800" prefHeight="600">
+                <Tab text="Create Friend" closable="false">
+                </Tab>
+                <Tab text="Friends List" closable="false">
+                </Tab>
+                <Tab text="Update" closable="false">
+                </Tab>
+                <Tab text="Delete" closable="false">
+                </Tab>
+            </TabPane>
         </Scene>
     </scene>
 </Stage>
