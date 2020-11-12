@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 
 public class UI extends Application {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         launch(args);
     }
 
