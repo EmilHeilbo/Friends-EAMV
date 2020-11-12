@@ -1,6 +1,5 @@
 package presentation;
 
-// import org.openjfx.application.Application;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;

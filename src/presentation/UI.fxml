@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.stage.Stage?>
-
 <!--Color scheme: 092E3B, 06F8F9, 97F807, F67E15, B51723-->
 
 <Stage resizable="false" title="Friends" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -40,8 +39,33 @@
                <RowConstraints />
                <RowConstraints />
                <RowConstraints />
-            </rowConstraints>
-            </GridPane>
+                <MenuBar prefWidth="800" GridPane.columnSpan="2">
+                    <Menu text="bruh">
+                        <MenuItem text="This"/>
+                        <MenuItem text="Is"/>
+                        <MenuItem text="A"/>
+                        <MenuItem text="Useless"/>
+                        <MenuItem text="Dropdown"/>
+                        <MenuItem text="Menu"/>
+                    </Menu>
+                </MenuBar>
+                <VBox prefWidth="200" style="-fx-background-color:#06F8F9" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="10">
+                    <TextField promptText="sample text"/>
+                </VBox>
+                <Button text="Bruh" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                <ListView GridPane.rowIndex="2"/>
+            </GridPane>-->
+            <TabPane style="-fx-background-color:#092e3b" prefWidth="800" prefHeight="600">
+                <Tab text="Create Friend" closable="false">
+                </Tab>
+                <Tab text="Friends List" closable="false">
+                </Tab>
+                <Tab text="Update" closable="false">
+                </Tab>
+                <Tab text="Delete" closable="false">
+                </Tab>
+            </TabPane>
+>>>>>>> 49c5a3d437bd165bdc19836fa5e4c240e2d4d3b2
         </Scene>
     </scene>
 </Stage>
