@@ -50,7 +50,7 @@
 - [ ] Det vigtigeste er back-end, så UI kan være simpelt til at starte med?
 - [ ] Kommunikations platform og hyppighed?
 - [ ] Standing meetings - Korte møder, hvor vi tager status, lægger en plan. Måske mere end en gang pr. arbejds session?
-- [ ] Læse plan og forventningsafstemning med hinanden?
+- [x] Læse plan og forventningsafstemning med hinanden?
   - [ ] Hvordan læser vi bedst individuelt?
   - [ ] Opsamling af læste sider / emner?
 - [ ] Bekymringer for projektet?
