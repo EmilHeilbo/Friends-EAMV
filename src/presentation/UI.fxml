@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.stage.Stage?>
-<?import javafx.scene.Scene?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.event.ActionEvent?>
-<?import javafx.event.EventHandler?>
-
+<?import javafx.scene.Scene ?>
+<?import javafx.scene.control.Menu ?>
+<?import javafx.scene.control.MenuBar ?>
+<?import javafx.scene.control.MenuItem ?>
+<?import javafx.scene.control.TableColumn ?>
+<?import javafx.scene.control.TableView ?>
+<?import javafx.scene.control.TextField ?>
+<?import javafx.scene.layout.ColumnConstraints ?>
+<?import javafx.scene.layout.GridPane ?>
+<?import javafx.scene.layout.RowConstraints ?>
+<?import javafx.stage.Stage ?>
 <!--Color scheme: 092E3B, 06F8F9, 97F807, F67E15, B51723-->
 
-<Stage title="Friends" resizable="false" minHeight="600" minWidth="800">
+<Stage resizable="false" title="Friends" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <scene>
         <Scene>
-            <!--<GridPane style="-fx-background-color:#092E3B">
-                <MenuBar prefWidth="800" GridPane.columnSpan="2">
-                    <Menu text="bruh">
-                        <MenuItem text="This"/>
-                        <MenuItem text="Is"/>
-                        <MenuItem text="A"/>
-                        <MenuItem text="Useless"/>
-                        <MenuItem text="Dropdown"/>
-                        <MenuItem text="Menu"/>
+            <GridPane style="-fx-background-color: #092E3B">
+                <MenuBar prefHeight="25.0" prefWidth="325.0">
+                    <Menu text="Menu">
+                        <MenuItem text="test2" />
                     </Menu>
                 </MenuBar>
-                <VBox prefWidth="200" style="-fx-background-color:#06F8F9" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="10">
-                    <TextField promptText="sample text"/>
-                </VBox>
-                <Button text="Bruh" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
-                <ListView GridPane.rowIndex="2"/>
-            </GridPane>-->
-            <TabPane style="-fx-background-color:#092e3b" prefWidth="800" prefHeight="600">
-                <Tab text="Create Friend" closable="false">
-                </Tab>
-                <Tab text="Friends List" closable="false">
-                </Tab>
-                <Tab text="Update" closable="false">
-                </Tab>
-                <Tab text="Delete" closable="false">
-                </Tab>
-            </TabPane>
+                <TextField promptText="Søg" GridPane.rowIndex="1" />
+                <TableView id="tableView8" prefHeight="100.0" prefWidth="100.0" GridPane.rowIndex="2">
+                    <columns>
+                        <TableColumn maxWidth="-1.0" minWidth="45.0" prefWidth="45.0" text="Navn" />
+                        <TableColumn maxWidth="-1.0" minWidth="45.0" prefWidth="45.0" text="Email" />
+                        <TableColumn maxWidth="-1.0" minWidth="50.0" prefWidth="50.0" text="Mobil" />
+                        <TableColumn minWidth="60.0" prefWidth="60.0" text="Gruppe" />
+                        <TableColumn maxWidth="-1.0" minWidth="75.0" prefWidth="75.0" text="Interesser" />
+                    </columns>
+                </TableView>
+                <columnConstraints>
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
         </Scene>
     </scene>
 </Stage>
